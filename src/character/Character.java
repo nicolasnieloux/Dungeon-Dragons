@@ -12,7 +12,6 @@ public class Character {
 
     //Constructors
     public Character() {
-
     }
 
     public Character(String name)
