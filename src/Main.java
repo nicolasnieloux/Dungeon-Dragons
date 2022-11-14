@@ -5,22 +5,13 @@ import menu.Menu;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world! D&D");
-        // test class Character
-//        Character Nico = new Character("nicolas","azezr");
-//        System.out.println(Nico);
-//
+
+//Lancement ou arrêt du jeu
         Menu start = new Menu();
-        start.startGame();
+        start.printMainMenu();
+//Demande du nom et du type
+//
 
-        String nameCharacter=start.askName();
-        System.out.println("Votre nom est : " + nameCharacter );
-
-        String typeCharacter=start.askType();
-        System.out.println(typeCharacter);
-
-        Game player = new Game();
-        Character charact = player.createPlayer(nameCharacter,typeCharacter);
-        System.out.println(charact);
 
 
     }
