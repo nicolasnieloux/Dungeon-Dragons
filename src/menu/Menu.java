@@ -1,9 +1,8 @@
 package menu;
 
-
 import character.Character;
-import game.Game;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -21,10 +20,11 @@ public class Menu {
         choice = keyboard.nextLine();
         if (choice.equals("1")) {
             System.out.println("Bienvenue dans le jeu D&D");
-//            defineCharacter();
+
             do {
                 createOrModify();
                 displayCharacter(character);
+
             } while (validateChoice() == false);
 
         } else if (choice.equals("2")) {
@@ -76,7 +76,7 @@ public class Menu {
         System.out.println("Voulez-vous valider (1) ou  modifier votre personnage (2)");
         choice = keyboard.nextLine();
         if (choice.equals("1")) {
-            System.out.println("Votre personnage est validé");
+            System.out.println("Votre personnage est validé, c'est parti!!!");
             return true;
         } else if (choice.equals("2")) {
             System.out.println("Reprenons alors au début");
@@ -87,28 +87,30 @@ public class Menu {
     }
 
 
-//    public void defineCharacter() {
-//        Menu start = new Menu();
-//
-//
-//        this.nameCharacter = start.askName();
-//        System.out.println("Votre nom est : " + nameCharacter);
-//
-//        this.typeCharacter = start.askType();
-//        System.out.println("Vous avez choisi d'être un " + typeCharacter);
-//
-//    }
+    public void setPlayerPoint() {
+        if (Objects.equals(typeCharacter, "Warrior")) {
+            character.setPointLife(10);
+            character.setAttackStrength(10);
+        } else {
+            character.setPointLife(6);
+            character.setAttackStrength(15);
+        }
+    }
 
     public void createOrModify() {
         String nameCharacter = askName();
         String typeCharacter = askType();
+
+
         if (character != null) {
             character.setName(nameCharacter);
             character.setType(typeCharacter);
+            setPlayerPoint();
 
         } else {
             character = new Character(nameCharacter, typeCharacter);
-
+            setPlayerPoint();
+//
         }
     }
 

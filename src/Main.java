@@ -9,8 +9,6 @@ public class Main {
 //Lancement ou arrêt du jeu
         Menu start = new Menu();
         start.printMainMenu();
-//Demande du nom et du type
-//
 
 
 
