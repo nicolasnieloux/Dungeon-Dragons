@@ -96,5 +96,4 @@ public class Menu {
             character.setDefensiveWeapon(typeCharacter);
         }
     }
-
 }
