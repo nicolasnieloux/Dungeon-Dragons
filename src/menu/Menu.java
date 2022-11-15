@@ -1,16 +1,12 @@
 package menu;
 
 import character.Character;
-import character.equipment.DefensiveEquipment;
-import character.equipment.OffensiveEquipment;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 
 public class Menu {
-    //    String nameCharacter;
-//    String typeCharacter;
+
     Character character;
 
 

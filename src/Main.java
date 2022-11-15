@@ -11,11 +11,9 @@ public class Main {
         Menu start = new Menu();
         start.printMainMenu();
 
-//        Plateau affichePlateau = new Plateau();
-//        affichePlateau.displayPlateau();
-
-//Game test = new Game();
-//test.rollDice();
-//    }
-}}
+        //Lancement de la Game
+        Game test = new Game();
+        test.playGame();
+    }
+}
 

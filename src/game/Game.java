@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Game {
 
+int playerPosition=1;
     Character player;
     public Character createPlayer(String nameCharacter, String typeCharacter) {
         Character player = new Character(nameCharacter,typeCharacter );
@@ -15,26 +16,22 @@ public class Game {
 
 
 // Lancement du dé
-    public void rollDice() {
-        int n;
-        Random random = new Random();
-
-        n= random.nextInt(5 +1)+1;
-        System.out.println(n);
-    }
-
-    // Déplacement du joueur
-
-    public void movePlayer(){
-
-
+    public int rollDice() {
+        int de = (int)(Math.random()*6+1);
+        System.out.println("Résultat du dé : " + de);
+        return de;
     }
 
 
-    //Jouer 1 tour
-    //Lancer le dé
-    //Mise à jour de la position di joueur
-    //Afficher la position du joueur
+    public void playGame(){
 
+        while (playerPosition < 64) {
+            int de = rollDice();
+            playerPosition +=de;
+            System.out.println("La position du joueur est : " + playerPosition + "/64");
+        }
+        System.out.println("You win");
+
+    }
 
 }
