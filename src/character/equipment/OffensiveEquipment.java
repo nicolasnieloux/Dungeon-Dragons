@@ -6,9 +6,7 @@ public class OffensiveEquipment {
     private int attackLevel;
 
 
-
-
-// Getter et Setter
+    // Getter et Setter
     public String getName() {
         return name;
     }

@@ -1,5 +1,10 @@
 package character;
 
+import character.equipment.DefensiveEquipment;
+import character.equipment.OffensiveEquipment;
+
+import java.util.Objects;
+
 public class Character {
 
     //Attributes
@@ -9,13 +14,23 @@ public class Character {
     private int pointLife;
     private int attackStrength;
 
+    private int position;
+    private OffensiveEquipment weaponOff = new OffensiveEquipment();
+    private DefensiveEquipment weaponDef = new DefensiveEquipment();
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     //Constructors
     public Character() {
     }
 
-    public Character(String name)
-    {
+    public Character(String name) {
         this.name = name;
     }
 
@@ -59,16 +74,65 @@ public class Character {
     }
 
 
-    @Override
-    public String toString() {
-        return "Character{" +
-                "name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", pointLife=" + pointLife +
-                ", attackStrength=" + attackStrength +
-                '}';
+    public void setDefensiveWeapon(String typeCharacter) {
+
+
+        if (Objects.equals(typeCharacter, "Warrior")) {
+            this.weaponDef.setName("bouclier en mousse");
+            this.weaponDef.setType("Bouclier");
+            this.weaponDef.setDefenseLevel(2);
+
+        } else {
+            weaponDef.setName("Pluto");
+            weaponDef.setType("Baton de Mickey");
+            weaponDef.setDefenseLevel(5);
+        }
     }
 
+
+    public void setOffensiveWeapon(String typeCharacter) {
+
+        if (Objects.equals(typeCharacter, "Warrior")) {
+            weaponOff.setName("épée en mousse");
+            weaponOff.setType("Arme");
+            weaponOff.setAttackLevel(1);
+
+        } else {
+            weaponOff.setName("embrumation");
+            weaponOff.setType("Sort");
+            weaponOff.setAttackLevel(3);
+        }
+    }
+
+    public void setPlayerPoint(String typeCharacter) {
+        if (Objects.equals(typeCharacter, "Warrior")) {
+            setPointLife(10);
+            setAttackStrength(10);
+        } else {
+            setPointLife(6);
+            setAttackStrength(15);
+        }
+    }
+
+    /**
+     * @return string avec la description du perso
+     */
+    @Override
+    public String toString() {
+        String str;
+        str = "Résumons votre choix: \n";
+        str += "Votre nom : " + getName();
+        str += "\nVotre type : " + getType();
+        str += "\nPoint de vie : " + getPointLife();
+        str += "\nForce d'attaque : " + getAttackStrength();
+        str += "\nType d'arme : " + weaponOff.getType();
+        str += "\nNom de l'arme : " + weaponOff.getName();
+        str += "\nNiveau d'attaque : " + weaponOff.getAttackLevel();
+        str += "\nType de défense : " + weaponDef.getType();
+        str += "\nNom de la défense : " + weaponDef.getName();
+        str += "\nNiveau de défense : " + weaponDef.getDefenseLevel();
+        return str;
+    }
 
 
 }

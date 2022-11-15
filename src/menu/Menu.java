@@ -9,11 +9,10 @@ import java.util.Scanner;
 
 
 public class Menu {
-    String nameCharacter;
-    String typeCharacter;
+    //    String nameCharacter;
+//    String typeCharacter;
     Character character;
-    OffensiveEquipment weaponOff;
-    DefensiveEquipment  weaponDef;
+
 
     public void printMainMenu() {
 
@@ -27,7 +26,7 @@ public class Menu {
 
             do {
                 createOrModify();
-                displayCharacter(character, weaponOff, weaponDef);
+                System.out.println(character.toString());
 
             } while (validateChoice() == false);
 
@@ -65,20 +64,6 @@ public class Menu {
         return (type);
     }
 
-    public void displayCharacter(Character charact, OffensiveEquipment weaponOff, DefensiveEquipment weaponDef) {
-        System.out.println("Résumons votre choix: ");
-        System.out.println("Votre nom : " + charact.getName());
-        System.out.println("Votre type : " + charact.getType());
-        System.out.println("Point de vie : " + charact.getPointLife());
-        System.out.println("Force d'attaque : " + charact.getAttackStrength());
-        System.out.println("Type d'arme : " + weaponOff.getType());
-        System.out.println("Nom de l'arme : " + weaponOff.getName());
-        System.out.println("Niveau d'attaque : " + weaponOff.getAttackLevel());
-        System.out.println("Type de défense : " + weaponDef.getType());
-        System.out.println("Nom de la défense : " + weaponDef.getName());
-        System.out.println("Niveau de défense : " + weaponDef.getDefenseLevel());
-
-    }
 
     public Boolean validateChoice() {
         String choice;
@@ -87,50 +72,13 @@ public class Menu {
         choice = keyboard.nextLine();
         if (choice.equals("1")) {
             System.out.println("Votre personnage est validé, c'est parti!!!");
+
             return true;
         } else if (choice.equals("2")) {
             System.out.println("Reprenons alors au début");
             return false;
         } else {
             return false;
-        }
-    }
-
-
-    public void setPlayerPoint(String typeCharacter) {
-        if (Objects.equals(typeCharacter, "Warrior")) {
-            character.setPointLife(10);
-            character.setAttackStrength(10);
-        } else {
-            character.setPointLife(6);
-            character.setAttackStrength(15);
-        }
-    }
-
-    public void setOffensiveWeapon(String typeCharacter) {
-        weaponOff = new OffensiveEquipment();
-        if (Objects.equals(typeCharacter, "Warrior")) {
-            weaponOff.setName("épée en mousse");
-            weaponOff.setType("Arme");
-            weaponOff.setAttackLevel(1);
-
-        } else {
-            weaponOff.setName("embrumation");
-            weaponOff.setType("Sort");
-            weaponOff.setAttackLevel(3);
-        }
-    }
-    public void setDefensiveWeapon(String typeCharacter) {
-        weaponDef = new DefensiveEquipment();
-        if (Objects.equals(typeCharacter, "Warrior")) {
-            weaponDef.setName("bouclier en mousse");
-            weaponDef.setType("Bouclier");
-            weaponDef.setDefenseLevel(2);
-
-        } else {
-            weaponDef.setName("Pluto");
-            weaponDef.setType("Baton de Mickey");
-            weaponDef.setDefenseLevel(5);
         }
     }
 
@@ -142,14 +90,14 @@ public class Menu {
         if (character != null) {
             character.setName(nameCharacter);
             character.setType(typeCharacter);
-            setPlayerPoint(typeCharacter);
-            setOffensiveWeapon(typeCharacter);
-            setDefensiveWeapon(typeCharacter);
+            character.setPlayerPoint(typeCharacter);
+            character.setOffensiveWeapon(typeCharacter);
+            character.setDefensiveWeapon(typeCharacter);
         } else {
             character = new Character(nameCharacter, typeCharacter);
-            setPlayerPoint(typeCharacter);
-            setOffensiveWeapon(typeCharacter);
-            setDefensiveWeapon(typeCharacter);
+            character.setPlayerPoint(typeCharacter);
+            character.setOffensiveWeapon(typeCharacter);
+            character.setDefensiveWeapon(typeCharacter);
         }
     }
 
