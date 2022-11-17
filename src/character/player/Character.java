@@ -9,29 +9,18 @@ public abstract class Character {
 
     //Attributes
     protected String name;
-
     protected int pointLife;
     protected int attackStrength;
 
     protected int position;
-    protected OffensiveEquipment weaponOff ;
+    protected OffensiveEquipment weaponOff;
     protected DefensiveEquipment armour;
-
-
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
-    }
 
     //Constructors
 
     public Character(String name) {
         this.name = name;
     }
-
 
     // Getter & Setter
     public String getName() {
@@ -41,7 +30,6 @@ public abstract class Character {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public int getPointLife() {
         return pointLife;
@@ -58,5 +46,4 @@ public abstract class Character {
     public void setAttackStrength(int attackStrength) {
         this.attackStrength = attackStrength;
     }
-
 }

@@ -14,8 +14,6 @@ public class Warrior extends character.player.Character {
         this.armour=new Bouclier("Bouclier en mousse",1);
     }
 
-
-
 @Override
     public String toString() {
         return "Résumons votre choix: \n" +

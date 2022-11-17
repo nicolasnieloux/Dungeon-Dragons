@@ -10,12 +10,9 @@ abstract public class DefensiveEquipment {
         this.defenseLevel = defenseLevel;
     }
 
-
     @Override
     public String toString() {
         return  "\nname: " + name + "\n" +
                 "defenseLevel: " + defenseLevel + "\n";
     }
-
-
 }

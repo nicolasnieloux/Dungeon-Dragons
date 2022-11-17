@@ -6,7 +6,6 @@ public class Sort extends OffensiveEquipment {
         super(name, attackLevel);
     }
 
-
     @Override
     public String toString() {
         return "\ntype: Sort" + super.toString();

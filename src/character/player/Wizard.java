@@ -5,7 +5,6 @@ import character.equipment.offensive.Sort;
 
 public class Wizard extends character.player.Character {
 
-
     public Wizard(String name) {
         super(name);
         setPointLife(6);
@@ -13,7 +12,6 @@ public class Wizard extends character.player.Character {
         this.weaponOff=new Sort("Flameche",1);
         this.armour = new Philtre("Potion", 1);
   }
-
 
     @Override
     public String toString() {

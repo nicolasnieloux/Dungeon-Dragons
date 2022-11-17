@@ -7,12 +7,13 @@ import character.player.Wizard;
 import java.util.Objects;
 import java.util.Scanner;
 
-
 public class Menu {
 
     Character character;
 
-
+    /**
+     * Menu principal, Création/Modification du personnage
+     */
     public void printMainMenu() {
 
         String choice;
@@ -22,13 +23,9 @@ public class Menu {
         choice = keyboard.nextLine();
         if (choice.equals("1")) {
             System.out.println("Bienvenue dans le jeu D&D");
-
             do {
                 createOrModify();
-//                System.out.println(character.toString()); //Affichage des caractéristiques du perso avec la méthode ToString
-
             } while (validateChoice() == false);
-
         } else if (choice.equals("2")) {
             System.out.println("alors on veut arreter");
             System.exit(0);
@@ -38,6 +35,11 @@ public class Menu {
     }
 
 
+    /**
+     * Demande du nom avec la saisie de l'utilisateur
+     *
+     * @return String Nom de l'utilisateur
+     */
     public String askName() {
         String name;
         Scanner keyboard = new Scanner(System.in);
@@ -47,6 +49,11 @@ public class Menu {
         return (name);
     }
 
+    /**
+     * Demande le type du personnage avec la saisie de l'utilisateur
+     *
+     * @return String Type du personnage
+     */
     public String askType() {
         String response;
         String type;
@@ -63,7 +70,11 @@ public class Menu {
         return (type);
     }
 
-
+    /**
+     * Modifier le personnage et Valider celui-ci pour lancer la partie
+     *
+     * @return Boolean validation
+     */
     public Boolean validateChoice() {
         String choice;
         Scanner keyboard = new Scanner(System.in);
@@ -71,7 +82,6 @@ public class Menu {
         choice = keyboard.nextLine();
         if (choice.equals("1")) {
             System.out.println("Votre personnage est validé, c'est parti!!!");
-
             return true;
         } else if (choice.equals("2")) {
             System.out.println("Reprenons alors au début");
@@ -81,24 +91,24 @@ public class Menu {
         }
     }
 
+    /**
+     * Fonction création ou modification du personnage
+     */
+
     public void createOrModify() {
         String nameCharacter = askName();
         String typeCharacter = askType();
 
         if (character != null) {
             character.setName(nameCharacter);
-
         } else {
             if (Objects.equals(typeCharacter, "Warrior")) {
                 Warrior warrior = new Warrior(nameCharacter);
                 System.out.println(warrior);
-
-
             } else if (Objects.equals(typeCharacter, "Wizard")) {
                 Wizard wizard = new Wizard(nameCharacter);
                 System.out.println(wizard);
             }
         }
-
     }
 }

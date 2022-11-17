@@ -7,7 +7,6 @@ public class Bouclier extends DefensiveEquipment {
         super(name, defenseLevel);
     }
 
-
     @Override
     public String toString() {
         return "\ntype: Bouclier" + super.toString();

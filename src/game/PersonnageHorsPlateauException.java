@@ -1,10 +1,9 @@
 package game;
 
-public class PersonnageHorsPlateauException extends Exception{
+public class PersonnageHorsPlateauException extends Exception {
 
-public PersonnageHorsPlateauException(){
-
-}
+    public PersonnageHorsPlateauException() {
+    }
 
     @Override
     public String toString() {

@@ -7,7 +7,6 @@ public class Arme extends OffensiveEquipment {
         super(name, attackLevel);
     }
 
-
     @Override
     public String toString() {
         return "\ntype: Arme" + super.toString();
