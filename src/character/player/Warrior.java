@@ -5,9 +5,7 @@ import character.equipment.offensive.Arme;
 
 public class Warrior extends character.player.Character {
 
-    public Warrior() {
-    }
-
+//Constructor
     public Warrior(String name) {
         super(name);
         setPointLife(10);

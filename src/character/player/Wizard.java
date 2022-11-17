@@ -6,7 +6,6 @@ import character.equipment.offensive.Sort;
 public class Wizard extends character.player.Character {
 
 
-
     public Wizard(String name) {
         super(name);
         setPointLife(6);

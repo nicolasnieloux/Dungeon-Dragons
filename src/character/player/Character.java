@@ -5,8 +5,6 @@ import character.equipment.defensive.DefensiveEquipment;
 import character.equipment.offensive.OffensiveEquipment;
 
 
-import java.util.Objects;
-
 public abstract class Character {
 
     //Attributes
@@ -29,16 +27,9 @@ public abstract class Character {
     }
 
     //Constructors
-    public Character() {
-    }
 
     public Character(String name) {
         this.name = name;
-    }
-
-    public Character(String name, String type) {
-        this.name = name;
-
     }
 
 

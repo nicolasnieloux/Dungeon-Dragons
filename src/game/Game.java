@@ -1,6 +1,7 @@
 package game;
 
 //import character.player.Character;
+
 import menu.Menu;
 
 import java.util.Scanner;
@@ -18,15 +19,27 @@ public class Game {
     }
 
 
-    public void playGame() {
+    public void playGame() throws PersonnageHorsPlateauException {
         Scanner keyboard = new Scanner(System.in);
         String choice;
         playerPosition = 1;
-        while (playerPosition <= 64) {
-            int de = rollDice();
-            playerPosition += de;
-            System.out.println("La position du joueur est : " + playerPosition + "/64");
-        }
+
+        try {
+
+            while (true) {
+                int de = rollDice();
+                playerPosition += de;
+                System.out.println("La position du joueur est : " + playerPosition + "/64");
+                if (playerPosition > 64) {
+                    throw new PersonnageHorsPlateauException();
+                }
+
+            }
+        } catch (PersonnageHorsPlateauException e) {
+            System.out.println(e);
+        }finally {
+
+
         System.out.println("You win");
         System.out.print("Voulez-vous rejouer (1) ou Quitter (2) ?");
         choice = keyboard.nextLine();
@@ -41,5 +54,6 @@ public class Game {
             System.out.println("ERROR ERROR ERROR");
             System.exit(0);
         }
+    }
     }
 }
