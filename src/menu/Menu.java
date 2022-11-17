@@ -1,7 +1,10 @@
 package menu;
 
-import character.Character;
+import character.player.Character;
+import character.player.Warrior;
+import character.player.Wizard;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -22,7 +25,7 @@ public class Menu {
 
             do {
                 createOrModify();
-                System.out.println(character.toString());
+//                System.out.println(character.toString()); //Affichage des caractéristiques du perso avec la méthode ToString
 
             } while (validateChoice() == false);
 
@@ -82,18 +85,20 @@ public class Menu {
         String nameCharacter = askName();
         String typeCharacter = askType();
 
-
         if (character != null) {
             character.setName(nameCharacter);
-            character.setType(typeCharacter);
-            character.setPlayerPoint(typeCharacter);
-            character.setOffensiveWeapon(typeCharacter);
-            character.setDefensiveWeapon(typeCharacter);
+
         } else {
-            character = new Character(nameCharacter, typeCharacter);
-            character.setPlayerPoint(typeCharacter);
-            character.setOffensiveWeapon(typeCharacter);
-            character.setDefensiveWeapon(typeCharacter);
+            if (Objects.equals(typeCharacter, "Warrior")) {
+                Warrior warrior = new Warrior(nameCharacter);
+                System.out.println(warrior);
+
+
+            } else if (Objects.equals(typeCharacter, "Wizard")) {
+                Wizard wizard = new Wizard(nameCharacter);
+                System.out.println(wizard);
+            }
         }
+
     }
 }

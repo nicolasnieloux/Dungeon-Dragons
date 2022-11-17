@@ -1,6 +1,6 @@
 package game;
 
-import character.Character;
+//import character.player.Character;
 import menu.Menu;
 
 import java.util.Scanner;

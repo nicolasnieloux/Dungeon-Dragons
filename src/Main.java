@@ -1,4 +1,4 @@
-import character.Character;
+//import character.player.Character;
 import game.Game;
 import menu.Menu;
 import plateau.Plateau;

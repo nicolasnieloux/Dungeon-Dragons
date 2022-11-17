@@ -1,10 +1,14 @@
-package character.equipment;
+package character.equipment.offensive;
 
 public class OffensiveEquipment {
     private String name;
     private String type;
     private int attackLevel;
 
+    public OffensiveEquipment(String name, int attackLevel) {
+        this.name = name;
+        this.attackLevel = attackLevel;
+    }
 
     // Getter et Setter
     public String getName() {
@@ -32,5 +36,11 @@ public class OffensiveEquipment {
     }
 
     public static void main(String[] args) {
+    }
+
+    @Override
+    public String toString() {
+        return "\nname: " + name +
+                "\nattackLevel : " + attackLevel;
     }
 }
