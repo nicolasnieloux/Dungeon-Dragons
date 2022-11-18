@@ -2,7 +2,6 @@ package character.equipment.defensive;
 
 abstract public class DefensiveEquipment {
     protected String name;
-    protected String type;
     protected int defenseLevel;
 
     public DefensiveEquipment(String name, int defenseLevel) {
