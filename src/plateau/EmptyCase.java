@@ -1,8 +1,10 @@
 package plateau;
 
+import character.player.Character;
+
 public class EmptyCase implements Case{
     @Override
-    public void interract() {
+    public void interract(Character c) {
         System.out.println("Bonjour, case vide");
     }
 }

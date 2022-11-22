@@ -12,6 +12,14 @@ public abstract class Character {
     protected int pointLife;
     protected int attackStrength;
 
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
     protected int position;
     protected OffensiveEquipment weaponOff;
     protected DefensiveEquipment armour;

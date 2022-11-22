@@ -21,7 +21,6 @@ public class Wizard extends character.player.Character {
                 "Point de vie : " + getPointLife()+"\n" +
                 "Force d'attaque : " + getAttackStrength() +"\n"+
                 "\nWeapon Offensive" + weaponOff +"\n"+
-                "\nArmour" + armour +"\n"+
-                '}';
+                "\nArmour" + armour +"\n";
     }
 }

@@ -12,11 +12,11 @@ public class Main {
 //        start.printMainMenu();
 
         // Lancement de la partie
-//        Game test = new Game();
-//        test.playGame();
+        Game test = new Game();
+        test.playGame();
 
-        Plateau testBoard = new Plateau();
-        testBoard.board();
+//        Plateau testBoard = new Plateau();
+//        testBoard.board();
 
     }
 }

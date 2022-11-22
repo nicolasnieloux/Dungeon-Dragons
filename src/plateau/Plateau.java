@@ -9,22 +9,96 @@ import java.util.ArrayList;
 public class Plateau {
 
 
-    public void board() {
-
-        ArrayList<Case> slot = new ArrayList<Case>();
+    public ArrayList<Case> getBoard() {
+        ArrayList<Case> slot = new ArrayList<>();
 
         slot.add(new EmptyCase());
         slot.add(new Potion(5));
-        slot.add(new Enemy("Christophe"));
+        slot.add(new Enemy("Ennemy"));
         slot.add(new Potion(15));
         slot.add(new Arme("hache en mousse", 2));
 
-        for (Case test:slot){
-            test.interract();
 
-        }
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+        slot.add(new Arme("hache en mousse", 2));
+
+        slot.add(new EmptyCase());
+        slot.add(new Potion(5));
+        slot.add(new Enemy("Ennemy"));
+        slot.add(new Potion(15));
+
+
+        return slot;
+
+
+//        slot.get(2).interract();
+//        for (Case c:slot){
+//            c.interract();
+//        }
     }
-
 
 
 }
