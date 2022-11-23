@@ -16,7 +16,7 @@ public class Warrior extends character.player.Character {
 
 @Override
     public String toString() {
-        return "Résumons votre choix: \n" +
+        return "Les stats de votre personnage: \n" +
                 "\nVotre nom : " + getName() +"\n" +
                 "classe :"+ "Warrior \n"+
                 "Point de vie : " + getPointLife()+"\n" +

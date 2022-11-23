@@ -16,7 +16,7 @@ public class Game {
 
     Menu menu = new Menu();
     Plateau plateau = new Plateau();
-    Character character;
+
 
     public void validatePerso() {
 
@@ -86,6 +86,23 @@ public class Game {
         return de;
     }
 
+    public void endGame() {
+        String choiceEndGame = menu.endOrGame();
+        if (choiceEndGame.equals("1")) {
+            System.out.println("on rejoue");
+            try {
+                playGame();
+            } catch (PersonnageHorsPlateauException e) {
+
+            }
+        } else if (choiceEndGame.equals("2")) {
+            System.out.println("alors on veut arreter");
+            System.exit(0);
+        } else {
+            System.out.println("ERROR ERROR ERROR");
+            System.exit(0);
+        }
+    }
 
     //Fonction jouer une partie
     public void playOneTurn(Character perso) {
@@ -94,17 +111,15 @@ public class Game {
         Scanner keyboard = new Scanner(System.in);
         try {
             while (true) {
+
                 int de = rollDice();
-                int playerPosition = perso.getPosition() + de;
-                perso.setPosition(playerPosition);
-                System.out.println("Press enter to continue");
-                keyboard.nextLine();
                 System.out.println("Résultat du dé : " + de);
 
+                int playerPosition= plateau.okValidateMove(perso, de); //Exception
+//
+                System.out.println("Press enter to continue");
+                keyboard.nextLine();
 
-                if (playerPosition > 64) {
-                    throw new PersonnageHorsPlateauException();
-                }
                 System.out.println("La position du joueur est : " + playerPosition + "/64");
                 slot.get(playerPosition).interract(perso);
                 System.out.println(perso);
@@ -112,32 +127,13 @@ public class Game {
         } catch (PersonnageHorsPlateauException e) {
             System.out.println(e);
         } finally {
-
-            System.out.println("You win");
-            System.out.print("Voulez-vous rejouer (1) ou Quitter (2) ?");
-            String choice = keyboard.nextLine();
-            if (choice.equals("1")) {
-                System.out.println("on rejoue");
-                try {
-                    playGame();
-                } catch (PersonnageHorsPlateauException e) {
-                    throw new RuntimeException(e);
-                }
-            } else if (choice.equals("2")) {
-                System.out.println("alors on veut arreter");
-                System.exit(0);
-            } else {
-                System.out.println("ERROR ERROR ERROR");
-                System.exit(0);
-            }
+            endGame();
         }
+
+
     }
 
-
     public void playGame() throws PersonnageHorsPlateauException {
-//        Scanner keyboard = new Scanner(System.in);
-//        String choice;
-
 
 //Appel de la fonction pour le titre du jeu
         menu.startGamePresentation();

@@ -64,4 +64,16 @@ public class Menu {
     }
 
 
+    public String endOrGame(){
+        Scanner keyboard = new Scanner(System.in);
+        String choiceEndGame;
+        System.out.println("Partie terminée");
+        System.out.print("Voulez-vous rejouer (1) ou Quitter (2) ?");
+        choiceEndGame = keyboard.nextLine();
+        return choiceEndGame;
+    }
+
+
+
+
 }
