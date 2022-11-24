@@ -73,7 +73,14 @@ public class Menu {
         return choiceEndGame;
     }
 
-
+public static String choiceBoard(){
+    Scanner keyboard = new Scanner(System.in);
+    String choiceBoard;
+    System.out.println("Quel plateau souhaitez-vous?");
+    System.out.print("Pré-défini(1) ou Random (2) ?");
+    choiceBoard = keyboard.nextLine();
+    return choiceBoard;
+}
 
 
 }

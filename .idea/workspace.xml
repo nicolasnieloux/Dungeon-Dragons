@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949e512b-93e9-481d-bd4a-b2289638aee4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bonus/Eclair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Eclair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bonus/Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Fireball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/Arme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/Arme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plateau/EmptyCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plateau/EmptyCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plateau/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plateau/Plateau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +103,7 @@
       <workItem from="1669020600876" duration="21636000" />
       <workItem from="1669104255842" duration="12925000" />
       <workItem from="1669189385743" duration="23574000" />
-      <workItem from="1669275779061" duration="9680000" />
+      <workItem from="1669275779061" duration="22857000" />
     </task>
     <servers />
   </component>
@@ -129,8 +130,8 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="18" />
+          <line>138</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

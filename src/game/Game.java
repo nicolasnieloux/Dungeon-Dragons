@@ -17,6 +17,8 @@ public class Game {
     Menu menu = new Menu();
     Plateau plateau = new Plateau();
 
+    ArrayList<Case> slot = new ArrayList<>();
+
     public void validatePerso() {
 
         String validChoice = menu.validateChoice();
@@ -96,9 +98,9 @@ public class Game {
     }
 
     //Fonction jouer une partie
-    public void playOneTurn(Character perso) {
+    public void playOneTurn(Character perso, ArrayList<Case> slot) {
 
-        ArrayList<Case> slot = plateau.getBoard();
+//        ArrayList<Case> slot = plateau.getBoardFixe();
         Scanner keyboard = new Scanner(System.in);
         try {
             while (true) {
@@ -125,6 +127,20 @@ public class Game {
 
     }
 
+
+
+    public ArrayList<Case> boardChoice(){
+        String boardType=Menu.choiceBoard();
+
+        if (boardType.equals("1")){
+
+           slot=plateau.getBoardFixe();
+        } else {
+          slot= plateau.getBoardRandom();
+        }
+        return slot;
+    }
+
     public void playGame() throws PersonnageHorsPlateauException {
 
 //Appel de la fonction pour le titre du jeu
@@ -138,7 +154,8 @@ public class Game {
 
             validatePerso();
             c.setPosition(1);
-            playOneTurn(c);
+           ArrayList<Case> typeBoard=boardChoice();
+            playOneTurn(c,typeBoard);
 
         } else if (choix.equals("2")) {
             System.out.println("alors on veut arreter");
