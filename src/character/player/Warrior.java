@@ -3,6 +3,7 @@ package character.player;
 import character.equipment.defensive.Bouclier;
 import character.equipment.offensive.Arme;
 
+
 public class Warrior extends character.player.Character {
 
 //Constructor
@@ -16,12 +17,12 @@ public class Warrior extends character.player.Character {
 
 @Override
     public String toString() {
-        return "Les stats de votre personnage: \n" +
+        return "\nLes stats de votre personnage: \n" +
                 "\nVotre nom : " + getName() +"\n" +
                 "classe :"+ "Warrior \n"+
                 "Point de vie : " + getPointLife()+"\n" +
                 "Force d'attaque : " + getAttackStrength() +"\n"+
-                "\nWeapon Offensive: " + weaponOff +"\n"+
+                "\nWeapon Offensive: " + weaponOff+"\n"+
                 "\nArmour: " + armour +"\n";
     }
 }

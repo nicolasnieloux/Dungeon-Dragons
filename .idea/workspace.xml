@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949e512b-93e9-481d-bd4a-b2289638aee4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bonus/Eclair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bonus/Epée.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bonus/Fireball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bonus/PotionBig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bonus/massue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enemy/Dragon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enemy/Gobelin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enemy/Sorcier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/Eclair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Eclair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/Epée.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Epee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Fireball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/PotionBig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/PotionBig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/massue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Massue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/Arme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/Arme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/OffensiveEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/OffensiveEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/player/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/player/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/player/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enemy/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Dragon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enemy/Gobelin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Gobelin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enemy/Sorcier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Sorcier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plateau/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plateau/Plateau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +114,8 @@
       <workItem from="1669017011885" duration="2550000" />
       <workItem from="1669020600876" duration="21636000" />
       <workItem from="1669104255842" duration="12925000" />
-      <workItem from="1669189385743" duration="7342000" />
+      <workItem from="1669189385743" duration="23574000" />
+      <workItem from="1669275779061" duration="8866000" />
     </task>
     <servers />
   </component>
@@ -140,18 +142,8 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>148</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>147</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="16" />
+          <line>140</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,14 +3,20 @@ package enemy;
 import plateau.Case;
 import character.player.Character;
 
-import java.util.Objects;
 
 public class Enemy implements Case {
+
 
     protected String name;
     protected int pointLife;
     protected int attackStrength;
 
+
+    public Enemy(String name, int pointLife, int attackStrength) {
+        this.name = name;
+        this.pointLife = pointLife;
+        this.attackStrength = attackStrength;
+    }
 
     public String getName() {
         return name;
@@ -38,28 +44,21 @@ public class Enemy implements Case {
 
     @Override
     public String toString() {
-        return "Enemy{" +
-                "name='" + name + '\'' +
-                ", pointLife=" + pointLife +
-                ", attackStrength=" + attackStrength +
-                '}';
+        return "Les stats de l'enemi: " +
+                "\nname: " + name + '\'' +
+                "\npointLife : " + pointLife +
+                "\nattackStrength : " + attackStrength;
     }
 
     @Override
     public void interract(Character c) {
 
+        System.out.println("\nVous recontrez un " + getName());
+        System.out.println("\nVous perdez " + getAttackStrength() + " points de vie");
+
+        int pointLife = c.getPointLife();
+        pointLife -= getAttackStrength();
+        c.setPointLife(pointLife);
 
     }
 }
-
-//        if (Objects.equals(name, "Christophe")) {
-//            System.out.println("Bah ouai, c'est une parenthèse");
-//            int pointLife= c.getPointLife();
-//            pointLife -=5;
-//            c.setPointLife(pointLife);
-//
-//
-//        } else {
-//            System.out.println("Un ennemi est devant vous!!!");
-//        }
-//    }

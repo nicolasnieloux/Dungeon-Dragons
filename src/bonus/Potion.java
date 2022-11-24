@@ -5,33 +5,18 @@ import plateau.Case;
 
 public class Potion implements Case {
 
-    //Attributs
-    public int soin;
-
-    public Potion(int soin) {
-        this.soin = soin;
-    }
 
     @Override
     public void interract(Character c) {
 
+        System.out.println("\nVous avez trouvé une petite potion");
+        System.out.println("\nVous gagnez 2 points de vie");
+        Potion potion = new Potion();
+        System.out.println(potion);
+        int pointLife = c.getPointLife();
+        pointLife += 2;
+        c.setPointLife(pointLife);
 
-        if (soin == 5) {
-            int pointLife = c.getPointLife();
-            pointLife += 5;
-            c.setPointLife(pointLife);
-
-            System.out.println("Vous avez trouvé une grande potion");
-
-
-        } else {
-
-            int pointLife = c.getPointLife();
-            pointLife += 2;
-            c.setPointLife(pointLife);
-
-            System.out.println("Vous avez trouvé une petite potion");
-
-        }
     }
+
 }

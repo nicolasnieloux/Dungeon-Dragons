@@ -9,6 +9,7 @@ public class Arme extends OffensiveEquipment implements Case {
         super(name, attackLevel);
     }
 
+
     @Override
     public String toString() {
         return "\ntype: Arme" + super.toString();
@@ -16,9 +17,13 @@ public class Arme extends OffensiveEquipment implements Case {
 
     @Override
     public void interract(Character c) {
-        System.out.println("Arme récupérée");
+        System.out.println("\nUne arme traîne par terre : " + getName());
+        System.out.println("\nVous gagnez " + getAttackLevel() + " points d'attaque");
 
 
+        int attackLevel = c.getAttackStrength();
+        attackLevel += getAttackLevel();
+        c.setAttackStrength(attackLevel);
     }
 
 

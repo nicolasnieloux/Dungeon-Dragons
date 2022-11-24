@@ -1,11 +1,11 @@
 package bonus;
 
-import character.player.Character;
-import plateau.Case;
+import character.equipment.offensive.Arme;
 
-public class Fireball implements Case {
-    @Override
-    public void interract(Character c) {
 
+public class Fireball extends Arme {
+
+    public Fireball() {
+        super("Boule de feu",7);
     }
 }

@@ -9,13 +9,25 @@ abstract public class OffensiveEquipment {
         this.attackLevel = attackLevel;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAttackLevel() {
+        return attackLevel;
+    }
+
 
     public static void main(String[] args) {
     }
 
     @Override
     public String toString() {
-        return "\nname: " + name +
-                "\nattackLevel : " + attackLevel;
+        return "\nname: " + getName() +
+                "\nattackLevel : " + getAttackLevel();
     }
 }

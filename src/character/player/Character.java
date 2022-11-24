@@ -26,6 +26,22 @@ public abstract class Character {
 
     //Constructors
 
+    public OffensiveEquipment getWeaponOff() {
+        return weaponOff;
+    }
+
+    public void setWeaponOff(OffensiveEquipment weaponOff) {
+        this.weaponOff = weaponOff;
+    }
+
+    public DefensiveEquipment getArmour() {
+        return armour;
+    }
+
+    public void setArmour(DefensiveEquipment armour) {
+        this.armour = armour;
+    }
+
     public Character(String name) {
         this.name = name;
     }

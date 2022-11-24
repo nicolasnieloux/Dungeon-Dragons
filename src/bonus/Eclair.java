@@ -1,11 +1,11 @@
 package bonus;
 
-import character.player.Character;
-import plateau.Case;
+import character.equipment.offensive.Arme;
 
-public class Eclair implements Case {
-    @Override
-    public void interract(Character c) {
 
+public class Eclair extends Arme {
+    public Eclair() {
+        super("Eclair de génie",2);
     }
+
 }

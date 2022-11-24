@@ -17,7 +17,6 @@ public class Game {
     Menu menu = new Menu();
     Plateau plateau = new Plateau();
 
-
     public void validatePerso() {
 
         String validChoice = menu.validateChoice();
@@ -29,16 +28,13 @@ public class Game {
             Character c = create();
             validatePerso();
         }
-
     }
 
-    //Fonction askName
     public String askName() {
         String name = menu.askName();
         return name;
     }
 
-    //Fonction askType
     public String askType() {
         String type;
         String choix = menu.askType();
@@ -54,10 +50,8 @@ public class Game {
     //Affichage des stats
     public void showStat(Character personnage) {
         System.out.println(personnage);
-
     }
 
-    //Fonction create un personnage
     public Character create() {
         String nameCharacter = askName();
         String typeCharacter = askType();
@@ -71,9 +65,6 @@ public class Game {
         }
         return character1;
     }
-
-
-//Fonction validation du choix
 
 
     /**
@@ -112,13 +103,14 @@ public class Game {
         try {
             while (true) {
 
+                System.out.println("Press enter to continue");
+                keyboard.nextLine();
+
                 int de = rollDice();
                 System.out.println("Résultat du dé : " + de);
 
                 int playerPosition= plateau.okValidateMove(perso, de); //Exception
-//
-                System.out.println("Press enter to continue");
-                keyboard.nextLine();
+
 
                 System.out.println("La position du joueur est : " + playerPosition + "/64");
                 slot.get(playerPosition).interract(perso);
