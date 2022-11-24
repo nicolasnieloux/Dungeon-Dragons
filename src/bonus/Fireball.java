@@ -1,9 +1,9 @@
 package bonus;
 
-import character.equipment.offensive.Arme;
+import character.equipment.offensive.Sort;
 
 
-public class Fireball extends Arme {
+public class Fireball extends Sort {
 
     public Fireball() {
         super("Boule de feu",7);
