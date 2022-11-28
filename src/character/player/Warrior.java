@@ -9,8 +9,8 @@ public class Warrior extends character.player.Character {
 //Constructor
     public Warrior(String name) {
         super(name);
-        setPointLife(2);
-        setAttackStrength(1);
+        setPointLife(20);
+        setAttackStrength(10);
         this.weaponOff=new Arme("Epee en mousse", 1);
         this.armour=new Bouclier("Bouclier en mousse",1);
     }

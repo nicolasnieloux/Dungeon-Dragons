@@ -6,7 +6,7 @@ import plateau.Case;
 public class Gobelin extends Enemy {
 
     public Gobelin() {
-        super("GobelinEEEEE", 6, 1);
+        super("GobelinEEEEE", 6, 10);
     }
 
 

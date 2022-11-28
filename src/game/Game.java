@@ -75,7 +75,7 @@ public class Game {
      *
      * @return int valeur du dé
      */
-    public int rollDice() {
+    public static int rollDice() {
 //        int de = (int) (Math.random() * 6 + 1);
         int de = 1;
         return de;
@@ -118,8 +118,6 @@ public class Game {
                 System.out.println("La position du joueur est : " + playerPosition + "/64");
                 slot.get(playerPosition).interract(perso);
 
-                System.out.println(slot.get(playerPosition-1));
-//                slot.set(playerPosition,new EmptyCase());
 
                 System.out.println(perso);
             }
@@ -135,7 +133,6 @@ public class Game {
 
 
     }
-
 
 
     public ArrayList<Case> boardChoice(){
@@ -162,9 +159,10 @@ public class Game {
             Character c = create();
 
             validatePerso();
-            c.setPosition(1);
+            c.setPosition(0);
            ArrayList<Case> typeBoard=boardChoice();
             System.out.println(typeBoard);
+
 
 
               playOneTurn(c, typeBoard);
