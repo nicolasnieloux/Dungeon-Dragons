@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="949e512b-93e9-481d-bd4a-b2289638aee4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonus/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonus/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/player/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enemy/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plateau/EmptyCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plateau/EmptyCase.java" afterDir="false" />
@@ -103,7 +108,9 @@
       <workItem from="1669020600876" duration="21636000" />
       <workItem from="1669104255842" duration="12925000" />
       <workItem from="1669189385743" duration="23574000" />
-      <workItem from="1669275779061" duration="22857000" />
+      <workItem from="1669275779061" duration="23449000" />
+      <workItem from="1669363763548" duration="19599000" />
+      <workItem from="1669622364746" duration="5680000" />
     </task>
     <servers />
   </component>
@@ -130,8 +137,18 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>138</line>
-          <option name="timeStamp" value="19" />
+          <line>61</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

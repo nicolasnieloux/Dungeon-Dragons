@@ -5,7 +5,6 @@ import plateau.Case;
 
 public class Potion implements Case {
 
-
     @Override
     public void interract(Character c) {
 
@@ -16,7 +15,5 @@ public class Potion implements Case {
         int pointLife = c.getPointLife();
         pointLife += 2;
         c.setPointLife(pointLife);
-
     }
-
 }

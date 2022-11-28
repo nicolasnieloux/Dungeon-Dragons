@@ -8,7 +8,7 @@ import enemy.Sorcier;
 import game.PersonnageHorsPlateauException;
 
 import java.util.ArrayList;
-import java.util.Objects;
+
 
 public class Plateau {
     int nbCase=64;
@@ -28,7 +28,6 @@ public class Plateau {
                 case 28, 41 -> slot.add(new PotionBig());
                 default -> slot.add(new EmptyCase());
             }
-
         }
         return slot;
     }
@@ -40,7 +39,6 @@ public class Plateau {
         int dragon =4;
         int sorcier =10;
         int gobelin=10;
-
         int massue =5;
         int epee=4;
         int eclair=5;
@@ -120,7 +118,6 @@ public class Plateau {
                 bigPotion--;
             }
         }
-
         return slot;
     }
 
@@ -130,10 +127,8 @@ public class Plateau {
         int pos = p.getPosition() + dice;
         if (pos > nbCase) {
             throw new PersonnageHorsPlateauException();
-
         }
         p.setPosition(p.getPosition() + dice);
         return p.getPosition();
-
     }
 }

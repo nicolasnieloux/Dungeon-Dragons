@@ -6,6 +6,7 @@ import character.player.Warrior;
 import character.player.Wizard;
 import menu.Menu;
 import plateau.Case;
+import plateau.EmptyCase;
 import plateau.Plateau;
 
 import java.util.ArrayList;
@@ -75,7 +76,8 @@ public class Game {
      * @return int valeur du dé
      */
     public int rollDice() {
-        int de = (int) (Math.random() * 6 + 1);
+//        int de = (int) (Math.random() * 6 + 1);
+        int de = 1;
         return de;
     }
 
@@ -100,10 +102,9 @@ public class Game {
     //Fonction jouer une partie
     public void playOneTurn(Character perso, ArrayList<Case> slot) {
 
-//        ArrayList<Case> slot = plateau.getBoardFixe();
         Scanner keyboard = new Scanner(System.in);
         try {
-            while (true) {
+            while (perso.getPointLife()>0) {
 
                 System.out.println("Press enter to continue");
                 keyboard.nextLine();
@@ -116,7 +117,15 @@ public class Game {
 
                 System.out.println("La position du joueur est : " + playerPosition + "/64");
                 slot.get(playerPosition).interract(perso);
+
+                System.out.println(slot.get(playerPosition-1));
+//                slot.set(playerPosition,new EmptyCase());
+
                 System.out.println(perso);
+            }
+
+            if (perso.getPointLife()<=0){
+                System.out.println("You died!");
             }
         } catch (PersonnageHorsPlateauException e) {
             System.out.println(e);
@@ -155,7 +164,11 @@ public class Game {
             validatePerso();
             c.setPosition(1);
            ArrayList<Case> typeBoard=boardChoice();
-            playOneTurn(c,typeBoard);
+            System.out.println(typeBoard);
+
+
+              playOneTurn(c, typeBoard);
+
 
         } else if (choix.equals("2")) {
             System.out.println("alors on veut arreter");

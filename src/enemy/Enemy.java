@@ -1,7 +1,12 @@
 package enemy;
 
+import bonus.Massue;
 import plateau.Case;
 import character.player.Character;
+import menu.Menu;
+
+import java.util.Objects;
+import java.util.Scanner;
 
 
 public class Enemy implements Case {
@@ -50,15 +55,66 @@ public class Enemy implements Case {
                 "\nattackStrength : " + attackStrength;
     }
 
+
+
+
+
     @Override
     public void interract(Character c) {
-
+        Scanner keyboard = new Scanner(System.in);
         System.out.println("\nVous recontrez un " + getName());
-        System.out.println("\nVous perdez " + getAttackStrength() + " points de vie");
+        System.out.println("\nVous pouvez perdre " + getAttackStrength() + " points de vie");
 
+        System.out.println("-----------------------------");
+        System.out.println("Combattez ou fuir?????");
+        System.out.println("-----------------------------");
+
+        System.out.println("Press enter to continue");
+        keyboard.nextLine();
+
+        int pointLifeEnemy = getPointLife();
         int pointLife = c.getPointLife();
-        pointLife -= getAttackStrength();
-        c.setPointLife(pointLife);
+
+
+        String actionOraction = Menu.escapeOrFight();
+        if (Objects.equals(actionOraction, "1")) {
+
+            pointLifeEnemy -= c.getAttackStrength();
+            setPointLife(pointLifeEnemy);
+//                    pointLife -= getAttackStrength();
+//                    c.setPointLife(pointLife);
+            System.out.println("Point de vie de l'enemi : " + pointLifeEnemy);
+
+            System.out.println("Press enter to continue");
+            keyboard.nextLine();
+
+            if (pointLifeEnemy <= 0) {
+                System.out.println("Ennemi tué!! GG");
+
+
+
+
+            } else {
+                System.out.println(("Enemi touché"));
+                System.out.println(("Enemi contre attaque"));
+                System.out.println(("Vous perdez " + getAttackStrength() + "points de vie"));
+
+                System.out.println("Press enter to continue");
+                keyboard.nextLine();
+
+                System.out.println(("L'enemi s'enfuit.... Chiale!!!"));
+                pointLife -= getAttackStrength();
+                c.setPointLife(pointLife);
+            }
+
+        } else {
+            int positionPlayer = c.getPosition();
+            positionPlayer -=1;
+            c.setPosition(positionPlayer);
+            System.out.println("Vous reculez de 1 cases");
+            System.out.println("Votre position est " + c.getPosition() + "/64");
+
+        }
 
     }
 }

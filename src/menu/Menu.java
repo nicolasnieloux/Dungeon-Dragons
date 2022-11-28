@@ -1,7 +1,5 @@
 package menu;
 
-import character.player.Character;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -12,7 +10,6 @@ public class Menu {
     }
 
 
-
     public String createOrQuit() {
         String choice;
         Scanner keyboard = new Scanner(System.in);
@@ -20,7 +17,6 @@ public class Menu {
         choice = keyboard.nextLine();
         return choice;
     }
-
 
 
     /**
@@ -81,6 +77,16 @@ public static String choiceBoard(){
     choiceBoard = keyboard.nextLine();
     return choiceBoard;
 }
+
+public static String escapeOrFight(){
+    Scanner keyboard = new Scanner(System.in);
+    String choiceAction;
+    System.out.println("Que souhaitez-vous faire?");
+    System.out.println(("(1) Combattre / (2) Fuir"));
+    choiceAction = keyboard.nextLine();
+    return choiceAction;
+}
+
 
 
 }
