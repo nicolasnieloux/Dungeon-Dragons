@@ -5,5 +5,5 @@ import character.player.Character;
 
 public interface Case {
 
- void interract(Character c);
+    void interract(Character c);
 }

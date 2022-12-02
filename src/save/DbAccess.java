@@ -36,41 +36,48 @@ public class DbAccess {
     }
 
 
-    public void getHero() {
-        final String QUERY = "SELECT * FROM hero";
-        Statement stmt;
-        ResultSet rs;
-        try {
-            stmt = con.createStatement();
-            rs = stmt.executeQuery(QUERY);
-            while (rs.next()) {
-                System.out.print("ID: " + rs.getInt("id"));
-                System.out.print(", Nom: " + rs.getString("nom"));
-                System.out.print(", Type: " + rs.getString("type"));
-                System.out.println(", Niveau de vie: " + rs.getInt("niveauVie"));
-                System.out.println(", Niveau de force: " + rs.getInt("niveauForce"));
-                System.out.println(", Arme/Sort: " + rs.getString("armeSort"));
-                System.out.println(", Bouclier: " + rs.getString("bouclier"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//    public void getHero() {
+//        final String QUERY = "SELECT * FROM hero";
+//        Statement stmt;
+//        ResultSet rs;
+//        try {
+//            stmt = con.createStatement();
+//            rs = stmt.executeQuery(QUERY);
+//            while (rs.next()) {
+//                System.out.print("ID: " + rs.getInt("id"));
+//                System.out.print(", Nom: " + rs.getString("nom"));
+//                System.out.print(", Type: " + rs.getString("type"));
+//                System.out.println(", Niveau de vie: " + rs.getInt("niveauVie"));
+//                System.out.println(", Niveau de force: " + rs.getInt("niveauForce"));
+//                System.out.println(", Arme/Sort: " + rs.getString("armeSort"));
+//                System.out.println(", Bouclier: " + rs.getString("bouclier"));
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 
-    }
+//    }
 
     public void save(Character c) {
 
-        final String QUERY = "INSERT INTO hero (`nom`, `type`, `niveauVie`, `niveauForce`, `armeSort`,`bouclier` ) VALUES ('"
-                + c.getName() + "', '"
-                + c.getType() + "', '"
-                + c.getPointLife() + "', '"
-                + c.getAttackStrength() + "', '"
-                + c.getWeaponOff().getName() + "', '"
-                + c.getArmour().getName() + "')";
-        Statement stmt;
+        final String QUERY = "INSERT INTO hero (nom, type, niveauVie, niveauForce, armeSort,bouclier ) VALUES (?, ?, ?, ?,?, ?)";
+//                + c.getName() + "', '"
+//                + c.getType() + "', '"
+//                + c.getPointLife() + "', '"
+//                + c.getAttackStrength() + "', '"
+//                + c.getWeaponOff().getName() + "', '"
+//                + c.getArmour().getName() + "')";
+        PreparedStatement stmt;
         try {
-            stmt = con.createStatement();
-            stmt.executeUpdate(QUERY);
+            stmt = con.prepareStatement(QUERY);
+            stmt.setString(1, c.getName());
+            stmt.setString(2, c.getType());
+            stmt.setInt(3, c.getPointLife());
+            stmt.setInt(4, c.getAttackStrength());
+            stmt.setString(5, c.getWeaponOff().getName());
+            stmt.setString(6, c.getArmour().getName());
+
+            stmt.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -79,23 +86,26 @@ public class DbAccess {
 
 
     public void removeHero(int heroIndex) {
-        final String QUERY = "DELETE FROM hero" + " WHERE id= " + heroIndex + "";
-        Statement stmt;
+        final String QUERY = "DELETE FROM hero" + " WHERE id= ?";
+        PreparedStatement stmt;
         try {
-            stmt = con.createStatement();
-            stmt.executeUpdate(QUERY);
+            stmt = con.prepareStatement(QUERY);
+            stmt.setInt(1, heroIndex);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public ResultSet selectHero(int id) {
-        final String QUERY = "SELECT * FROM hero WHERE id = " + id + "";
-        Statement stmt1;
+        final String QUERY = "SELECT * FROM hero WHERE id = ?";
+        PreparedStatement stmt1;
 
         try {
-            stmt1 = con.createStatement();
-            return stmt1.executeQuery(QUERY);
+            stmt1 = con.prepareStatement(QUERY);
+            stmt1.setInt(1, id);
+            return stmt1.executeQuery();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -105,9 +115,9 @@ public class DbAccess {
 
     public ResultSet selectHeroList() {
         final String QUERY = "SELECT * FROM hero";
-        Statement stmt2;
+        PreparedStatement stmt2;
         try {
-            stmt2 = con.createStatement();
+            stmt2 = con.prepareStatement(QUERY);
             return stmt2.executeQuery(QUERY);
 
         } catch (SQLException e) {
@@ -117,18 +127,22 @@ public class DbAccess {
     }
 
     public void update(Character c, int id) {
-        final String QUERY = "UPDATE hero SET " +
-                "nom = '" + c.getName() + "'" +
-                "type = '" + c.getType() + "'" +
-                "niveauVie = '" + c.getPointLife() + "'" +
-                "niveauForce = '" + c.getAttackStrength() + "'" +
-                "armeSort = '" + c.getWeaponOff() + "'" +
-                "bouclier = " + c.getArmour() + "WHERE id =" + id;
+        final String QUERY = "UPDATE hero SET nom = ?, type = ?, niveauVie = ?, niveauForce = ?,armeSort = ?, bouclier=? WHERE id=?";
 
-        Statement stmt;
+
+        PreparedStatement stmt;
         try {
-            stmt = con.createStatement();
-            stmt.executeQuery(QUERY);
+            stmt = con.prepareStatement(QUERY);
+
+            stmt.setString(1, c.getName());
+            stmt.setString(2, c.getType());
+            stmt.setInt(3, c.getPointLife());
+            stmt.setInt(4, c.getAttackStrength());
+            stmt.setString(5, c.getWeaponOff().getName());
+            stmt.setString(6, c.getArmour().getName());
+            stmt.setInt(7, id);
+
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -10,12 +10,11 @@ public interface CharacterPersistence {
 
     Map<Integer, Character> loadAll() throws SQLException;
 
-    Character loadCharacter (int id) throws SQLException;
+    Character loadCharacter(int id) throws SQLException;
 
-    void save (Character c);
+    void save(Character c);
 
+    void update(Character c, int id);
 
-    void update (Character c, int id);
-
-    void remove (int id);
+    void remove(int id);
 }
