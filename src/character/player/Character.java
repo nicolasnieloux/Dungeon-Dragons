@@ -12,6 +12,27 @@ public abstract class Character {
     protected int pointLife;
     protected int attackStrength;
 
+    protected String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public Character(){}
+    public Character(String name, String type, int pointLife, int attackStrength) {
+        this.name = name;
+        this.type = type;
+        this.pointLife = pointLife;
+        this.attackStrength = attackStrength;
+
+//        this.weaponOff = weaponOff;
+//        this.armour = armour;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public int getPosition() {
         return position;
     }
@@ -21,6 +42,15 @@ public abstract class Character {
     }
 
     protected int position;
+
+    @Override
+    public String toString() {
+        return "Character{" +
+                "weaponOff=" + weaponOff +
+                ", armour=" + armour +
+                '}';
+    }
+
     protected OffensiveEquipment weaponOff;
     protected DefensiveEquipment armour;
 

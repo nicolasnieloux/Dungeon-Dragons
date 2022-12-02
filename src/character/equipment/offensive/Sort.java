@@ -10,6 +10,7 @@ public class Sort extends OffensiveEquipment implements Case {
         super(name, attackLevel);
     }
 
+    public Sort(String name){super(name);}
     @Override
     public String toString() {
         return "\ntype: Sort" + super.toString();

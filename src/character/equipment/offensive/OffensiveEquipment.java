@@ -9,6 +9,10 @@ abstract public class OffensiveEquipment {
         this.attackLevel = attackLevel;
     }
 
+    public OffensiveEquipment(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

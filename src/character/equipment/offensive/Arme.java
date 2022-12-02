@@ -10,6 +10,9 @@ public class Arme extends OffensiveEquipment implements Case {
         super(name, attackLevel);
     }
 
+    public Arme(String name) {
+        super(name);
+    }
 
     @Override
     public String toString() {

@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949e512b-93e9-481d-bd4a-b2289638aee4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/plateau/Cementary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/save/CharacterDbFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/save/CharacterPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/save/DbAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/save/DbCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dungeon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dungeon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/defensive/Bouclier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/defensive/Bouclier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/defensive/DefensiveEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/defensive/DefensiveEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/defensive/Philtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/defensive/Philtre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/Arme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/Arme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/OffensiveEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/OffensiveEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/equipment/offensive/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/equipment/offensive/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/player/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/player/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enemy/Gobelin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enemy/Gobelin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/character/player/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/player/Wizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plateau/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plateau/Plateau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,18 +56,30 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicolas.nieloux/IdeaProjects/dungeon/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicolas.nieloux/Desktop/mysql-connector-j-8.0.31.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nicolas.nieloux\IdeaProjects\dungeon\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nicolas.nieloux\IdeaProjects\dungeon\src" />
     </key>
   </component>
@@ -107,7 +132,11 @@
       <workItem from="1669189385743" duration="23574000" />
       <workItem from="1669275779061" duration="23449000" />
       <workItem from="1669363763548" duration="19599000" />
-      <workItem from="1669622364746" duration="15814000" />
+      <workItem from="1669622364746" duration="21494000" />
+      <workItem from="1669708958097" duration="23601000" />
+      <workItem from="1669794850004" duration="20744000" />
+      <workItem from="1669881144408" duration="19015000" />
+      <workItem from="1669968219018" duration="8276000" />
     </task>
     <servers />
   </component>
@@ -136,6 +165,25 @@
           <url>file://$PROJECT_DIR$/src/enemy/Enemy.java</url>
           <line>97</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
+          <line>190</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
+          <line>69</line>
+          <properties class="game.Game" method="create">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

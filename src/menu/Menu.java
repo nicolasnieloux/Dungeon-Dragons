@@ -13,7 +13,8 @@ public class Menu {
     public String createOrQuit() {
         String choice;
         Scanner keyboard = new Scanner(System.in);
-        System.out.print("Création de personnage (1) ou quitter la partie (2) ?");
+        System.out.print("Création de personnage (1), Sélection BDD (2) ou quitter la partie (3) ?");
+
         choice = keyboard.nextLine();
         return choice;
     }
@@ -87,6 +88,13 @@ public static String escapeOrFight(){
     return choiceAction;
 }
 
-
+public static String heroOrWizard(){
+    Scanner keyboard = new Scanner(System.in);
+    String choiceAction;
+    System.out.println("Quel heros voulez-vous?");
+    System.out.println(("Choix en fonction de l'id"));
+    choiceAction = keyboard.nextLine();
+    return choiceAction;
+}
 
 }

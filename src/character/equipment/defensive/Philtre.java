@@ -6,9 +6,10 @@ public class Philtre extends DefensiveEquipment {
         super(name, defenseLevel);
 
     }
+    public Philtre(String name){super(name);}
     @Override
     public String toString() {
-        return "\ntype: Philtre" + super.toString();
+        return super.toString();
     }
 }
 
